@@ -36,35 +36,36 @@ export default function Portfolio() {
                 <span className="text-4xl font-bold text-[#1d2d50]">JD</span>
               </div>
             </div>
-            <h1 className="text-3xl font-bold mb-2 text-[#ccd6f6]">Jane Doe</h1>
+            <h1 className="text-3xl font-bold mb-2 text-[#ccd6f6]">
+              Md. Nazmus Sakib
+            </h1>
             <p className="text-xl mb-4 text-[#64ffda]">Frontend Developer</p>
           </motion.div>
           <motion.div className="space-y-4" {...fadeIn}>
             <p className="text-sm leading-relaxed">
-              Passionate frontend developer with 5 years of experience crafting
-              beautiful and responsive web interfaces. Committed to creating
-              intuitive and engaging user experiences through clean and
-              efficient code.
+              Passionate frontend developer crafting beautiful and responsive
+              web interfaces. Committed to creating intuitive and engaging user
+              experiences through clean and efficient code.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-[#64ffda]/10 text-[#64ffda]"
+                className="hover:bg-[#64ffda] text-[#64ffda]"
               >
                 <Github className="h-5 w-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-[#64ffda]/10 text-[#64ffda]"
+                className="hover:bg-[#64ffda] text-[#64ffda]"
               >
                 <Linkedin className="h-5 w-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-[#64ffda]/10 text-[#64ffda]"
+                className="hover:bg-[#64ffda] text-[#64ffda]"
               >
                 <Mail className="h-5 w-5" />
               </Button>
