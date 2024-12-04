@@ -107,16 +107,14 @@ export default function Portfolio() {
                 <p className="mb-4">
                   I am a frontend developer with a passion for creating
                   beautiful, functional, and user-centered digital experiences.
-                  With 5 years of experience in the field, I specialize in
-                  building responsive web applications using modern JavaScript
-                  frameworks and libraries.
+                  My area of expertise in building responsive web applications
+                  using modern JavaScript frameworks and libraries.
                 </p>
                 <p>
                   I am dedicated to writing clean, maintainable code and
-                  constantly improving my skills. When I am not coding, you can
-                  find me exploring new design trends, contributing to
-                  open-source projects, or sharing my knowledge through blog
-                  posts and mentoring.
+                  constantly improving my skills. When I am not coding, I try to
+                  explore programming fundamentals and watch podcasts about
+                  various topics.
                 </p>
               </motion.div>
             )}
@@ -202,10 +200,10 @@ export default function Portfolio() {
                       Styling
                     </h3>
                     <ul className="list-disc list-inside">
-                      <li>Sass/SCSS</li>
-                      <li>Styled Components</li>
+                      {/* <li>Sass/SCSS</li> */}
                       <li>Tailwind CSS</li>
-                      <li>CSS Modules</li>
+                      <li>Styled Components</li>
+                      {/* <li>CSS Modules</li> */}
                     </ul>
                   </div>
                   <div>
@@ -213,10 +211,11 @@ export default function Portfolio() {
                       Tools & Ecosystem
                     </h3>
                     <ul className="list-disc list-inside">
-                      <li>Webpack & Vite</li>
+                      <li>Vite</li>
                       <li>Git & GitHub</li>
-                      <li>Jest & React Testing Library</li>
-                      <li>Storybook</li>
+                      <li>Postman</li>
+                      {/* <li>Jest & React Testing Library</li> */}
+                      {/* <li>Storybook</li> */}
                     </ul>
                   </div>
                   <div>
@@ -226,8 +225,8 @@ export default function Portfolio() {
                     <ul className="list-disc list-inside">
                       <li>Responsive Design</li>
                       <li>UI/UX Principles</li>
-                      <li>Figma & Sketch</li>
-                      <li>Accessibility (WCAG)</li>
+                      <li>Figma </li>
+                      {/* <li>Accessibility (WCAG)</li> */}
                     </ul>
                   </div>
                 </div>
