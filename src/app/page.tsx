@@ -176,15 +176,15 @@ export default function Portfolio() {
                     icon: "UI",
                   },
                   {
-                    title: "E-commerce SPA",
+                    title: "Job Quest",
                     description:
-                      "A single-page application built with Next.js and Redux, featuring server-side rendering and optimized performance.",
+                      "A React-based website that allows users to register and post a job. Job seekers can find their suitable jobs by job category.",
                     icon: "SPA",
                   },
                   {
-                    title: "Portfolio Generator",
+                    title: "Blood Aid",
                     description:
-                      "A React-based tool that allows developers to create and customize their portfolio websites with ease.",
+                      "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
                     icon: "PG",
                   },
                 ].map((project, index) => (
