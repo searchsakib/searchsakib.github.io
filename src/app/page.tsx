@@ -22,6 +22,8 @@ export default function Portfolio() {
     transition: { duration: 0.6 },
   };
 
+  const tabs = ["skills", "projects", "about"];
+
   return (
     <div className="min-h-screen bg-[#0a192f] text-[#8892b0] p-4 sm:p-8 flex items-center justify-center overflow-hidden">
       <motion.div
@@ -87,7 +89,7 @@ export default function Portfolio() {
 
         <div className="lg:w-2/3 p-8 flex flex-col">
           <motion.div className="mb-6 flex space-x-4" {...fadeIn}>
-            {["skills", "projects", "about"].map((tab) => (
+            {tabs.map((tab) => (
               <Button
                 key={tab}
                 variant="ghost"
