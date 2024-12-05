@@ -59,7 +59,10 @@ export default function Portfolio() {
                 </Button>
               </Link>
 
-              <Link href="www.linkedin.com/in/searchsakib" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/searchsakib"
+                target="_blank"
+              >
                 <Button
                   variant="ghost"
                   size="icon"
