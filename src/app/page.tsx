@@ -59,7 +59,7 @@ export default function Portfolio() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="lg:w-1/3 p-8 bg-[#1d2d50]">
+        <div className="lg:w-1/3 p-4 lg:p-8 bg-[#1d2d50]">
           <motion.div className="mb-8 text-center lg:text-left" {...fadeIn}>
             <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#64ffda] mx-auto lg:mx-0">
               <div className="w-full h-full bg-[#64ffda] flex items-center justify-center">
@@ -114,15 +114,18 @@ export default function Portfolio() {
           </motion.div>
         </div>
 
-        <div className="lg:w-2/3 p-8 flex flex-col">
-          <motion.div className="mb-6 flex space-x-4" {...fadeIn}>
+        <div className="lg:w-2/3 p-4 lg:p-8 flex flex-col">
+          <motion.div
+            className="mb-6 flex flex-col md:flex-row md:space-x-4"
+            {...fadeIn}
+          >
             {tabs.map((tab) => (
               <Button
                 key={tab}
                 variant="ghost"
-                className={`text-lg ${
+                className={`text-lg mx-5 md:mx-0 ${
                   activeTab === tab
-                    ? "text-[#64ffda] border-b-2 rounded-none border-[#64ffda]"
+                    ? "text-[#1d2d50] md:text-[#64ffda] md:border-b-2 bg-[#64ffda] md:bg-transparent rounded-none border-[#64ffda]"
                     : "text-[#8892b0]"
                 }`}
                 onClick={() => setActiveTab(tab)}
@@ -145,7 +148,7 @@ export default function Portfolio() {
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Skills & Expertise
                 </h2>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-[#64ffda]">
                       Core Technologies
@@ -203,7 +206,7 @@ export default function Portfolio() {
                 {projects.map((project, index) => (
                   <div
                     key={index}
-                    className="bg-[#233554] rounded-lg p-6 flex flex-col md:flex-row items-center"
+                    className="bg-[#233554] rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center"
                   >
                     <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-6">
                       <div className="rounded-lg overflow-hidden bg-[#64ffda]/10 h-40 flex items-center justify-center">
@@ -223,7 +226,7 @@ export default function Portfolio() {
                       <p className="text-[#8892b0] mb-4">
                         {project.description}
                       </p>
-                      <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+                      <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 space-x-0">
                         <Link href={project.live} target="_blank">
                           <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
                             <Globe className="mr-2 h-4 w-4" />
@@ -231,7 +234,7 @@ export default function Portfolio() {
                           </Button>
                         </Link>
                         <Link href={project.code} target="_blank">
-                          <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
+                          <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black flex">
                             <Github className="mr-2 h-4 w-4" />
                             Source Code
                           </Button>
