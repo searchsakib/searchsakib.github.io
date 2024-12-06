@@ -23,6 +23,26 @@ export default function Portfolio() {
   };
 
   const tabs = ["skills", "projects", "about"];
+  const projects = [
+    {
+      title: "Workout Gear",
+      description:
+        "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
+      image: "UI",
+    },
+    {
+      title: "Job Quest",
+      description:
+        "A React-based website that allows users to register and post a job. Job seekers can find their suitable jobs by job category.",
+      image: "SPA",
+    },
+    {
+      title: "Blood Aid",
+      description:
+        "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
+      image: "PG",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-[#8892b0] p-4 sm:p-8 flex items-center justify-center overflow-hidden">
@@ -173,26 +193,7 @@ export default function Portfolio() {
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Featured Projects
                 </h2>
-                {[
-                  {
-                    title: "Workout Gear",
-                    description:
-                      "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
-                    icon: "UI",
-                  },
-                  {
-                    title: "Job Quest",
-                    description:
-                      "A React-based website that allows users to register and post a job. Job seekers can find their suitable jobs by job category.",
-                    icon: "SPA",
-                  },
-                  {
-                    title: "Blood Aid",
-                    description:
-                      "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
-                    icon: "PG",
-                  },
-                ].map((project, index) => (
+                {projects.map((project, index) => (
                   <div
                     key={index}
                     className="bg-[#233554] rounded-lg p-6 flex flex-col md:flex-row items-center"
@@ -200,7 +201,7 @@ export default function Portfolio() {
                     <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-6">
                       <div className="rounded-lg overflow-hidden bg-[#64ffda]/10 h-40 flex items-center justify-center">
                         <span className="text-[#64ffda] text-4xl">
-                          {project.icon}
+                          {project.image}
                         </span>
                       </div>
                     </div>
@@ -211,7 +212,7 @@ export default function Portfolio() {
                       <p className="text-[#8892b0] mb-4">
                         {project.description}
                       </p>
-                      <div className="flex space-x-4">
+                      <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
                         <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
                           <Globe className="mr-2 h-4 w-4" />
                           View Live
