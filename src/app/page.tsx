@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("skills");
@@ -25,22 +26,28 @@ export default function Portfolio() {
   const tabs = ["skills", "projects", "about"];
   const projects = [
     {
-      title: "Workout Gear",
+      title: "Blood Aid",
       description:
-        "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
-      image: "UI",
+        "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
+      image: "/images/blood-aid.png",
+      live: "https://blood-aid-3dd80.web.app",
+      code: "https://github.com/searchsakib/bloodaid-client",
     },
     {
       title: "Job Quest",
       description:
         "A React-based website that allows users to register and post a job. Job seekers can find their suitable jobs by job category.",
-      image: "SPA",
+      image: "/images/job-quest.png",
+      live: "https://jobquest-59d5a.web.app",
+      code: "https://github.com/searchsakib/jobquest-client",
     },
     {
-      title: "Blood Aid",
+      title: "Workout Gear",
       description:
-        "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
-      image: "PG",
+        "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
+      image: "/images/workout-gear.png",
+      live: "https://workout-gear-client.vercel.app",
+      code: "https://github.com/searchsakib/workout_gear_client",
     },
   ];
 
@@ -200,9 +207,13 @@ export default function Portfolio() {
                   >
                     <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-6">
                       <div className="rounded-lg overflow-hidden bg-[#64ffda]/10 h-40 flex items-center justify-center">
-                        <span className="text-[#64ffda] text-4xl">
-                          {project.image}
-                        </span>
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} image`}
+                          width={400}
+                          height={400}
+                          className="w-full h-full object-cover object-top"
+                        ></Image>
                       </div>
                     </div>
                     <div className="w-full md:w-2/3">
@@ -213,14 +224,18 @@ export default function Portfolio() {
                         {project.description}
                       </p>
                       <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-                        <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
-                          <Globe className="mr-2 h-4 w-4" />
-                          View Live
-                        </Button>
-                        <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
-                          <Github className="mr-2 h-4 w-4" />
-                          Source Code
-                        </Button>
+                        <Link href={project.live} target="_blank">
+                          <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
+                            <Globe className="mr-2 h-4 w-4" />
+                            View Live
+                          </Button>
+                        </Link>
+                        <Link href={project.code} target="_blank">
+                          <Button className="group border border-[#64ffda] bg-transparent text-[#64ffda] hover:bg-[#64ffda]  hover:text-black">
+                            <Github className="mr-2 h-4 w-4" />
+                            Source Code
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
