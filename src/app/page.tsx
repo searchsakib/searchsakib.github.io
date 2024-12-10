@@ -26,12 +26,12 @@ export default function Portfolio() {
   const tabs = ["skills", "projects", "about"];
   const projects = [
     {
-      title: "Blood Aid",
+      title: "Workout Gear",
       description:
-        "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
-      image: "/images/blood-aid.png",
-      live: "https://blood-aid-3dd80.web.app",
-      code: "https://github.com/searchsakib/bloodaid-client",
+        "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
+      image: "/images/workout-gear.png",
+      live: "https://workout-gear-client.vercel.app",
+      code: "https://github.com/searchsakib/workout_gear_client",
     },
     {
       title: "Job Quest",
@@ -42,12 +42,12 @@ export default function Portfolio() {
       code: "https://github.com/searchsakib/jobquest-client",
     },
     {
-      title: "Workout Gear",
+      title: "Blood Aid",
       description:
-        "A Website for gym equipment. Search Product by name and category options for easier site navigation.",
-      image: "/images/workout-gear.png",
-      live: "https://workout-gear-client.vercel.app",
-      code: "https://github.com/searchsakib/workout_gear_client",
+        "A website using firebase and react, user can register for blood donation. Admin panel for admins, users and volunteers. Different search parameters to find suitable blood donor and a blog posting functionality to raise awareness about blood donation.",
+      image: "/images/blood-aid.png",
+      live: "https://blood-aid-3dd80.web.app",
+      code: "https://github.com/searchsakib/bloodaid-client",
     },
   ];
 
@@ -61,9 +61,15 @@ export default function Portfolio() {
       >
         <div className="lg:w-1/3 p-4 lg:p-8 bg-[#1d2d50]">
           <motion.div className="mb-8 text-center lg:text-left" {...fadeIn}>
-            <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#64ffda] mx-auto lg:mx-0">
-              <div className="w-full h-full bg-[#64ffda] flex items-center justify-center">
-                <span className="text-4xl font-bold text-[#1d2d50]">JD</span>
+            <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[#64ffda] mx-auto lg:mx-0">
+              <div className="w-full h-full flex items-center justify-center">
+                <Image
+                  src="/images/profile-img.jpeg"
+                  alt="profile image"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover object-top"
+                ></Image>
               </div>
             </div>
             <h1 className="text-3xl font-bold mb-2 text-[#ccd6f6]">
