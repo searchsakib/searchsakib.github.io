@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-// import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("skills");
@@ -16,12 +17,6 @@ export default function Portfolio() {
       contentRef.current.scrollTop = 0;
     }
   }, [activeTab]);
-
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  };
 
   const tabs = ["skills", "projects", "about"];
   const projects = [
@@ -51,16 +46,18 @@ export default function Portfolio() {
     },
   ];
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a192f] text-[#8892b0] p-4 sm:p-8 flex items-center justify-center overflow-hidden">
       <div
+        data-aos="fade-up"
         className="w-full max-w-6xl bg-[#112240] rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
-        // initial={{ opacity: 0, scale: 0.9 }}
-        // animate={{ opacity: 1, scale: 1 }}
-        // transition={{ duration: 0.5 }}
       >
         <div className="lg:w-1/3 p-4 lg:p-8 bg-[#1d2d50]">
-          <div className="mb-8 text-center lg:text-left" {...fadeIn}>
+          <div data-aos="fade-up" className="mb-8 text-center lg:text-left">
             <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[#64ffda] mx-auto lg:mx-0">
               <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -77,7 +74,7 @@ export default function Portfolio() {
             </h1>
             <p className="text-xl mb-4 text-[#64ffda]">Frontend Developer</p>
           </div>
-          <div className="space-y-4" {...fadeIn}>
+          <div data-aos="fade-up" className="space-y-4">
             <p className="text-sm leading-relaxed">
               Passionate frontend developer crafting beautiful and responsive
               web interfaces. Committed to creating intuitive and engaging user
@@ -123,7 +120,7 @@ export default function Portfolio() {
         <div className="lg:w-2/3 p-4 lg:p-8 flex flex-col">
           <div
             className="mb-6 flex flex-col md:flex-row md:space-x-4"
-            {...fadeIn}
+            data-aos="fade-up"
           >
             {tabs.map((tab) => (
               <Button
@@ -150,7 +147,7 @@ export default function Portfolio() {
             }}
           >
             {activeTab === "skills" && (
-              <div {...fadeIn}>
+              <div data-aos="fade-up">
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Skills & Expertise
                 </h2>
@@ -205,7 +202,7 @@ export default function Portfolio() {
             )}
 
             {activeTab === "projects" && (
-              <div {...fadeIn} className="space-y-6">
+              <div data-aos="fade-up" className="space-y-6">
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Featured Projects
                 </h2>
@@ -253,7 +250,7 @@ export default function Portfolio() {
             )}
 
             {activeTab === "about" && (
-              <div {...fadeIn}>
+              <div data-aos="fade-up">
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   About Me
                 </h2>
