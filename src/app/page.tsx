@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -53,14 +53,14 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-[#8892b0] p-4 sm:p-8 flex items-center justify-center overflow-hidden">
-      <motion.div
+      <div
         className="w-full max-w-6xl bg-[#112240] rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        // initial={{ opacity: 0, scale: 0.9 }}
+        // animate={{ opacity: 1, scale: 1 }}
+        // transition={{ duration: 0.5 }}
       >
         <div className="lg:w-1/3 p-4 lg:p-8 bg-[#1d2d50]">
-          <motion.div className="mb-8 text-center lg:text-left" {...fadeIn}>
+          <div className="mb-8 text-center lg:text-left" {...fadeIn}>
             <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[#64ffda] mx-auto lg:mx-0">
               <div className="w-full h-full flex items-center justify-center">
                 <Image
@@ -76,8 +76,8 @@ export default function Portfolio() {
               Md. Nazmus Sakib
             </h1>
             <p className="text-xl mb-4 text-[#64ffda]">Frontend Developer</p>
-          </motion.div>
-          <motion.div className="space-y-4" {...fadeIn}>
+          </div>
+          <div className="space-y-4" {...fadeIn}>
             <p className="text-sm leading-relaxed">
               Passionate frontend developer crafting beautiful and responsive
               web interfaces. Committed to creating intuitive and engaging user
@@ -117,11 +117,11 @@ export default function Portfolio() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="lg:w-2/3 p-4 lg:p-8 flex flex-col">
-          <motion.div
+          <div
             className="mb-6 flex flex-col md:flex-row md:space-x-4"
             {...fadeIn}
           >
@@ -139,7 +139,7 @@ export default function Portfolio() {
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </Button>
             ))}
-          </motion.div>
+          </div>
 
           <div
             ref={contentRef}
@@ -150,7 +150,7 @@ export default function Portfolio() {
             }}
           >
             {activeTab === "skills" && (
-              <motion.div {...fadeIn}>
+              <div {...fadeIn}>
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Skills & Expertise
                 </h2>
@@ -201,11 +201,11 @@ export default function Portfolio() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === "projects" && (
-              <motion.div {...fadeIn} className="space-y-6">
+              <div {...fadeIn} className="space-y-6">
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Featured Projects
                 </h2>
@@ -249,11 +249,11 @@ export default function Portfolio() {
                     </div>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             )}
 
             {activeTab === "about" && (
-              <motion.div {...fadeIn}>
+              <div {...fadeIn}>
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   About Me
                 </h2>
@@ -269,11 +269,11 @@ export default function Portfolio() {
                   explore programming fundamentals and watch podcasts about
                   various topics.
                 </p>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
