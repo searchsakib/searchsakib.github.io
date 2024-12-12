@@ -118,15 +118,12 @@ export default function Portfolio() {
         </div>
 
         <div className="lg:w-2/3 p-4 lg:p-8 flex flex-col">
-          <div
-            className="mb-6 flex flex-col md:flex-row md:space-x-4"
-            data-aos="fade-up"
-          >
+          <div className="mb-6 md:space-x-4" data-aos="fade-up">
             {tabs.map((tab) => (
               <Button
                 key={tab}
                 variant="ghost"
-                className={`text-lg mx-5 md:mx-0 ${
+                className={`text-lg  ${
                   activeTab === tab
                     ? "text-[#1d2d50] md:text-[#64ffda] md:border-b-2 bg-[#64ffda] md:bg-transparent rounded-none border-[#64ffda]"
                     : "text-[#8892b0]"
