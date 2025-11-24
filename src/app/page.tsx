@@ -44,6 +44,14 @@ export default function Portfolio() {
       live: "https://blood-aid-3dd80.web.app",
       code: "https://github.com/searchsakib/bloodaid-client",
     },
+    {
+      title: "Prep JS",
+      description:
+        "A website for Most common Javascript & Typescript interview questions with answers. It has a must-know option for a shortlist of questions and answers. ",
+      image: "/images/prep.png",
+      live: "https://prepjs.pages.dev",
+      code: "https://github.com/searchsakib/prepJS",
+    },
   ];
 
   useEffect(() => {
