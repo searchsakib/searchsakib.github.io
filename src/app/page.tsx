@@ -62,7 +62,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-[#0a192f] text-[#8892b0] p-4 sm:p-8 flex items-center justify-center overflow-hidden">
       <div
         data-aos="fade-up"
-        className="w-full max-w-6xl bg-[#112240] rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
+        className="w-full min-h-[650px] max-w-7xl bg-[#112240] rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row"
       >
         <div className="lg:w-1/3 p-4 lg:p-8 bg-[#1d2d50]">
           <div data-aos="fade-up" className="mb-8 text-center lg:text-left">
