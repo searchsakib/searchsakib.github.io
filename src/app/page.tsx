@@ -152,7 +152,7 @@ export default function Portfolio() {
             }}
           >
             {activeTab === "skills" && (
-              <div data-aos="fade-up">
+              <div>
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Skills & Expertise
                 </h2>
@@ -207,7 +207,7 @@ export default function Portfolio() {
             )}
 
             {activeTab === "projects" && (
-              <div data-aos="fade-up" className="space-y-6">
+              <div className="space-y-6">
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   Featured Projects
                 </h2>
@@ -255,7 +255,7 @@ export default function Portfolio() {
             )}
 
             {activeTab === "about" && (
-              <div data-aos="fade-up">
+              <div>
                 <h2 className="text-2xl font-semibold mb-4 text-[#ccd6f6]">
                   About Me
                 </h2>
