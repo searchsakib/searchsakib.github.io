@@ -147,7 +147,7 @@ export default function Portfolio() {
             ref={contentRef}
             className="flex-grow overflow-y-auto pr-4 custom-scrollbar"
             style={{
-              height: "calc(100vh - 400px)",
+              minHeight: "300px",
               maxHeight: "500px",
             }}
           >
