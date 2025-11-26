@@ -83,7 +83,7 @@ export default function Portfolio() {
             <p className="text-xl mb-4 text-[#64ffda]">Frontend Developer</p>
           </div>
           <div data-aos="fade-up" className="space-y-4">
-            <p className="text-sm leading-relaxed">
+            <p className="text-base leading-relaxed">
               Passionate frontend developer crafting beautiful and responsive
               web interfaces. Committed to creating intuitive and engaging user
               experiences through clean and efficient code.
