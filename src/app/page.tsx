@@ -84,9 +84,7 @@ export default function Portfolio() {
           </div>
           <div data-aos="fade-up" className="space-y-4">
             <p className="text-base leading-relaxed">
-              Passionate frontend developer crafting beautiful and responsive
-              web interfaces. Committed to creating intuitive and engaging user
-              experiences through clean and efficient code.
+Frontend Web Developer based in Bangladesh, specializing in building functional and responsive web interfaces using JavaScript, TypeScript, React, and Next.js. Committed to delivering intuitive and engaging user experiences through clean, efficient, and maintainable code.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <Link href="https://github.com/searchsakib" target="_blank">
