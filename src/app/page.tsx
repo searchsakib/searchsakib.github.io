@@ -261,7 +261,7 @@ Frontend Web Developer based in Bangladesh, specializing in building functional 
                  I am a frontend web developer who enjoys building clean, simple, and easy-to-use websites. I focus on creating interfaces that look good, work smoothly on all devices, and feel comfortable for users. I work with modern web technologies to turn ideas and designs into real, usable web pages.
                 </p>
                 <p>
-                 I am always trying to learn and grow as a developer. When I’m not coding, I like exploring programming basics and listening to podcasts on different topics to broaden my knowledge and thinking.
+                 I am always trying to learn and grow as a developer. When I’m not coding, I like exploring programming fundamentals and listening to podcasts on different topics.
                 </p>
               </div>
             )}
